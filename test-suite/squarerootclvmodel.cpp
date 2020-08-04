@@ -102,7 +102,7 @@ namespace square_root_clv_model {
 
 void SquareRootCLVModelTest::testSquareRootCLVVanillaPricing() {
     BOOST_TEST_MESSAGE(
-        "Testing vanilla option pricing with square root kernel process...");
+        "Testing vanilla option pricing with square-root kernel process...");
 
     using namespace ext::placeholders;
     using namespace square_root_clv_model;
@@ -187,7 +187,7 @@ void SquareRootCLVModelTest::testSquareRootCLVVanillaPricing() {
 
 void SquareRootCLVModelTest::testSquareRootCLVMappingFunction() {
     BOOST_TEST_MESSAGE(
-        "Testing mapping function of the square root kernel process...");
+        "Testing mapping function of the square-root kernel process...");
 
     using namespace square_root_clv_model;
 
@@ -374,8 +374,7 @@ namespace square_root_clv_model {
                 const Real ncp1 = 4*kappa*std::exp(-kappa*(t1-t0))
                     / (sigma*sigma*(1-std::exp(-kappa*(t1-t0))));
 
-                const LowDiscrepancy::ursg_type ursg
-                    = LowDiscrepancy::ursg_type(2, 1235ul);
+                const LowDiscrepancy::ursg_type ursg = LowDiscrepancy::ursg_type(2, 1235UL);
 
                 std::vector<GeneralStatistics> stats(strikes_.size());
 
@@ -483,7 +482,7 @@ namespace square_root_clv_model {
 
 void SquareRootCLVModelTest::testForwardSkew() {
     BOOST_TEST_MESSAGE(
-        "Testing forward skew dynamics with square root kernel process...");
+        "Testing forward skew dynamics with square-root kernel process...");
 
     using namespace square_root_clv_model;
 
@@ -780,8 +779,7 @@ void SquareRootCLVModelTest::testForwardSkew() {
 
     const TimeGrid bGrid(maturityTime, tSteps);
 
-    const PseudoRandom::ursg_type ursg
-        = PseudoRandom::ursg_type(tSteps, 1235ul);
+    const PseudoRandom::ursg_type ursg = PseudoRandom::ursg_type(tSteps, 1235UL);
 
     std::vector<GeneralStatistics> stats(n);
 
